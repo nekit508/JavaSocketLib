@@ -74,7 +74,7 @@ public class Client {
 
     public void send(String message){
         try {
-            out.write(message);
+            out.write(message + "\n");
         } catch (IOException e) {
             e.printStackTrace();
         }
