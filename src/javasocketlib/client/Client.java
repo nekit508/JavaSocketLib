@@ -26,7 +26,8 @@ public class Client {
     Thread receivingThread = new Thread(() -> {
         while(true){
             try {
-                onPacketEntered.get(in.readLine());
+                String data = in.readLine();
+                onPacketEntered.get(data);
             } catch (IOException e) {
                 e.printStackTrace();
             }
